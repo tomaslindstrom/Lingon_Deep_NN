@@ -285,7 +285,7 @@ def load_lingon_dataset(num_px = 64, num_py = 64):
     test_set_y_orig = test_set_y_orig.reshape(1, test_set_y_orig.shape[0])
     #Create classes - list i.e. the two classes "lingon" och "icke-lingon"
     
-    classes = correct_labels
+    classes = ("icke-lingon", "lingon")   #Before it was = corrct_labels, but cplicated order. Room for improvement
     
  
     return train_set_x_orig, train_set_y_orig, test_set_x_orig, test_set_y_orig, classes
